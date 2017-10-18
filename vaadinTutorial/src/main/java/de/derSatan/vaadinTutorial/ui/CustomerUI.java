@@ -3,8 +3,7 @@ package de.derSatan.vaadinTutorial.ui;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 
-import com.vaadin.annotations.Theme;
-import com.vaadin.server.FontAwesome;
+import com.vaadin.icons.VaadinIcons;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.shared.ui.ValueChangeMode;
 import com.vaadin.spring.annotation.SpringUI;
@@ -19,28 +18,26 @@ import de.derSatan.vaadinTutorial.entity.Customer;
 import de.derSatan.vaadinTutorial.repository.CustomerRepository;
 
 @SpringUI
-@Theme("valo")
-public class MainUI extends UI {
+public class CustomerUI extends UI {
 
 	private static final long serialVersionUID = -8505321228792500486L;
 
+	// Repository
 	private final CustomerRepository repo;
-
+	
+	// UI elements
 	private final CustomerEditor editor;
-
 	final Grid<Customer> grid;
-
 	final TextField filter;
-
 	private final Button addNewBtn;
 
 	@Autowired
-	public MainUI(CustomerRepository repo, CustomerEditor editor) {
+	public CustomerUI(CustomerRepository repo, CustomerEditor editor) {
 		this.repo = repo;
 		this.editor = editor;
 		this.grid = new Grid<>(Customer.class);
 		this.filter = new TextField();
-		this.addNewBtn = new Button("New customer", FontAwesome.PLUS);
+		this.addNewBtn = new Button("New customer", VaadinIcons.USER);
 	}
 
 	@Override
@@ -79,7 +76,6 @@ public class MainUI extends UI {
 		listCustomers(null);
 	}
 
-	// tag::listCustomers[]
 	void listCustomers(String filterText) {
 		if (StringUtils.isEmpty(filterText)) {
 			grid.setItems(repo.findAll());
@@ -88,5 +84,4 @@ public class MainUI extends UI {
 			grid.setItems(repo.findByLastNameStartsWithIgnoreCase(filterText));
 		}
 	}
-// end::listCustomers[]
 }
