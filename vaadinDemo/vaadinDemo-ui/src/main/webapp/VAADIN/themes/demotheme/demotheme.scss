@@ -186,16 +186,17 @@ $v-layout-spacing-horizontal: round($v-unit-size / 1.8) !default;
     @include box-shadow($editor-shadow);
   }
 
-  // About view
+  // Default view (Used as default, when nothing is done yet)
 
-  .about-view {
+  .default-view {
     overflow: auto;
 
-    .about-content {
+    .default-content {
       @include valo-panel-style;
-      max-width: 500px;
+      max-width: 650px;
       // Override the default of CustomLayout
       padding: $v-unit-size !important;
+      white-space: pre-wrap;
     }
   }
 
@@ -304,18 +305,18 @@ $v-layout-spacing-horizontal: round($v-unit-size / 1.8) !default;
       }
     }
 
-    // About view fills the display on small screens
-    .about-view {
+    // Default view fills the display on small screens
+    .default-view {
       padding-bottom: 0;
       padding-top: 0;
       height: auto;
       padding: 0.1 * $v-unit-size;
 
-      .v-slot-about-content {
+      .v-slot-default-content {
         overflow: auto;
       }
 
-      .about-content {
+      .default-content {
         width: 100%;
         max-width: 100%;
         height: auto;

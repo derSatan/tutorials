@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples;
+package de.hardt.vaadinDemo;
 
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;

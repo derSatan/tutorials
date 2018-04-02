@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.crud;
+package de.hardt.vaadinDemo.menuItems.status;
 
 import de.hardt.vaadinDemo.samples.ResetButtonForTextField;
 import de.hardt.vaadinDemo.samples.backend.DataService;
@@ -20,22 +20,22 @@ import com.vaadin.ui.themes.ValoTheme;
 /**
  * A view for performing create-read-update-delete operations on products.
  *
- * See also {@link SampleCrudLogic} for fetching the data, the actual CRUD
+ * See also {@link SystemStatusLogic} for fetching the data, the actual CRUD
  * operations and controlling the view based on events from outside.
  */
-public class SampleCrudView extends CssLayout implements View {
+public class SystemStatusView extends CssLayout implements View {
 
-    public static final String VIEW_NAME = "Inventory";
+    public static final String VIEW_NAME = "System Status";
     private ProductGrid grid;
     private ProductForm form;
     private TextField filter;
 
-    private SampleCrudLogic viewLogic = new SampleCrudLogic(this);
+    private SystemStatusLogic viewLogic = new SystemStatusLogic(this);
     private Button newProduct;
 
     private ProductDataProvider dataProvider = new ProductDataProvider();
 
-    public SampleCrudView() {
+    public SystemStatusView() {
         setSizeFull();
         addStyleName("crud-view");
         HorizontalLayout topLayout = createTopBar();

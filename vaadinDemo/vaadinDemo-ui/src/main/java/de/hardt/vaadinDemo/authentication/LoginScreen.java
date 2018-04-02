@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.authentication;
+package de.hardt.vaadinDemo.authentication;
 
 import java.io.Serializable;
 

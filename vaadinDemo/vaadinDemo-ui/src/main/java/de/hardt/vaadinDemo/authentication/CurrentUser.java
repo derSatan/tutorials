@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.authentication;
+package de.hardt.vaadinDemo.authentication;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinService;

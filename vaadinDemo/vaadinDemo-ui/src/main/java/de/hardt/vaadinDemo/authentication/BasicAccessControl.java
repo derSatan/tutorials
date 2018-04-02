@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.authentication;
+package de.hardt.vaadinDemo.authentication;
 
 /**
  * Default mock implementation of {@link AccessControl}. This implementation

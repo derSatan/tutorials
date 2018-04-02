@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples;
+package de.hardt.vaadinDemo;
 
 import java.util.HashMap;
 import java.util.Map;

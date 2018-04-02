@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.crud;
+package de.hardt.vaadinDemo.menuItems.status;
 
 import de.hardt.vaadinDemo.VaadinDemoUI;
 import de.hardt.vaadinDemo.samples.backend.DataService;
@@ -16,11 +16,11 @@ import com.vaadin.server.Page;
  * the system separately, and to e.g. provide alternative views for the same
  * data.
  */
-public class SampleCrudLogic implements Serializable {
+public class SystemStatusLogic implements Serializable {
 
-    private SampleCrudView view;
+    private SystemStatusView view;
 
-    public SampleCrudLogic(SampleCrudView simpleCrudView) {
+    public SystemStatusLogic(SystemStatusView simpleCrudView) {
         view = simpleCrudView;
     }
 
@@ -50,7 +50,7 @@ public class SampleCrudLogic implements Serializable {
 
         Page page = VaadinDemoUI.get().getPage();
         page.setUriFragment(
-                "!" + SampleCrudView.VIEW_NAME + "/" + fragmentParameter,
+                "!" + SystemStatusView.VIEW_NAME + "/" + fragmentParameter,
                 false);
     }
 

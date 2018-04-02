@@ -1,6 +1,5 @@
-package de.hardt.vaadinDemo.samples.about;
+package de.hardt.vaadinDemo.menuItems.about;
 
-import com.vaadin.icons.VaadinIcons;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.shared.Version;
@@ -15,19 +14,20 @@ public class AboutView extends VerticalLayout implements View {
     public static final String VIEW_NAME = "About";
 
     public AboutView() {
-        CustomLayout aboutContent = new CustomLayout("aboutview");
-        aboutContent.setStyleName("about-content");
+        CustomLayout aboutContent = new CustomLayout("defaultview");
+        aboutContent.setStyleName("default-content");
 
         // you can add Vaadin components in predefined slots in the custom
         // layout
         aboutContent.addComponent(
-                new Label(VaadinIcons.INFO_CIRCLE.getHtml()
-                        + "Output Management Demo Applikation (Benutzt Vaadin "
-                        + Version.getFullVersion(), ContentMode.HTML), "Info");
+                new Label("<h1>Demo OPM Vaadin Application</h1>", ContentMode.HTML), "header");
+        aboutContent.addComponent(
+                new Label("Dies ist eine Output Management Demo Applikation (Benutzt Vaadin "
+                        + Version.getFullVersion() + ")", ContentMode.TEXT), "info");
 
         setSizeFull();
         setMargin(false);
-        setStyleName("about-view");
+        setStyleName("default-view");
         addComponent(aboutContent);
         setComponentAlignment(aboutContent, Alignment.MIDDLE_CENTER);
     }

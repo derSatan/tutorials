@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.crud;
+package de.hardt.vaadinDemo.menuItems.status;
 
 import java.lang.reflect.InvocationTargetException;
 import java.text.DecimalFormat;
@@ -27,7 +27,7 @@ import com.vaadin.server.Page;
  */
 public class ProductForm extends ProductFormDesign {
 
-    private SampleCrudLogic viewLogic;
+    private SystemStatusLogic viewLogic;
     private Binder<Product> binder;
     private Product currentProduct;
 
@@ -60,7 +60,7 @@ public class ProductForm extends ProductFormDesign {
 
     }
 
-    public ProductForm(SampleCrudLogic sampleCrudLogic) {
+    public ProductForm(SystemStatusLogic sampleCrudLogic) {
         super();
         addStyleName("product-form");
         viewLogic = sampleCrudLogic;

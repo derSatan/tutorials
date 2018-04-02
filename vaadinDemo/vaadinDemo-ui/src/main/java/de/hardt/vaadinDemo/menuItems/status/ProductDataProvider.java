@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.crud;
+package de.hardt.vaadinDemo.menuItems.status;
 
 import java.util.Locale;
 import java.util.Objects;

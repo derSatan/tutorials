@@ -2,11 +2,10 @@ package de.hardt.vaadinDemo;
 
 import javax.servlet.annotation.WebServlet;
 
-import de.hardt.vaadinDemo.samples.MainScreen;
-import de.hardt.vaadinDemo.samples.authentication.AccessControl;
-import de.hardt.vaadinDemo.samples.authentication.BasicAccessControl;
-import de.hardt.vaadinDemo.samples.authentication.LoginScreen;
-import de.hardt.vaadinDemo.samples.authentication.LoginScreen.LoginListener;
+import de.hardt.vaadinDemo.authentication.AccessControl;
+import de.hardt.vaadinDemo.authentication.BasicAccessControl;
+import de.hardt.vaadinDemo.authentication.LoginScreen;
+import de.hardt.vaadinDemo.authentication.LoginScreen.LoginListener;
 
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
