@@ -29,8 +29,9 @@ import com.vaadin.ui.themes.ValoTheme;
 @Theme("demotheme")
 @Widgetset("de.hardt.vaadinDemo.VaadinDemoWidgetset")
 public class VaadinDemoUI extends UI {
-
-    private AccessControl accessControl = new BasicAccessControl();
+	private static final long serialVersionUID = 7529823721462726372L;
+	
+	private AccessControl accessControl = new BasicAccessControl();
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
@@ -39,7 +40,9 @@ public class VaadinDemoUI extends UI {
         getPage().setTitle("Output Management Demo Application");
         if (!accessControl.isUserSignedIn()) {
             setContent(new LoginScreen(accessControl, new LoginListener() {
-                @Override
+				private static final long serialVersionUID = 6116539138099871845L;
+
+				@Override
                 public void loginSuccessful() {
                     showMainView();
                 }
@@ -66,5 +69,6 @@ public class VaadinDemoUI extends UI {
     @WebServlet(urlPatterns = "/*", name = "VaadinDemoUIServlet", asyncSupported = true)
     @VaadinServletConfiguration(ui = VaadinDemoUI.class, productionMode = false)
     public static class VaadinDemoUIServlet extends VaadinServlet {
+		private static final long serialVersionUID = 2368840317112436358L;
     }
 }

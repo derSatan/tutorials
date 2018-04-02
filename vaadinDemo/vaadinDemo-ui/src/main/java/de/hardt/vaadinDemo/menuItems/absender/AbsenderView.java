@@ -9,19 +9,15 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 
 public class AbsenderView extends VerticalLayout implements View {
-
-    public static final String VIEW_NAME = "Absender DB";
+	private static final long serialVersionUID = 7691687151567540869L;
+	
+	public static final String VIEW_NAME = "Absender DB";
 
     public AbsenderView() {
         CustomLayout deusContent = new CustomLayout("defaultview");
         deusContent.setStyleName("default-content");
-
-        // you can add Vaadin components in predefined slots in the custom layout
-        deusContent.addComponent(
-                new Label("<h1>Absender DB View</h1>", ContentMode.HTML), "header");
-        deusContent.addComponent(
-                new Label("Alles zur Administration der Absender DB ...", ContentMode.TEXT), "info");
-
+        deusContent.addComponent(new Label("<h1>Absender DB View</h1>", ContentMode.HTML), "header");
+        deusContent.addComponent(new Label("Alles zur Administration der Absender DB ...", ContentMode.TEXT), "info");
         setSizeFull();
         setMargin(false);
         setStyleName("default-view");

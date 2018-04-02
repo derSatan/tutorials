@@ -1,20 +1,20 @@
-package de.hardt.vaadinDemo.menuItems.status;
+package de.hardt.vaadinDemo.menuItems.crud;
 
 import java.util.Locale;
 import java.util.Objects;
-import java.util.function.Supplier;
 import java.util.stream.Stream;
-
-import de.hardt.vaadinDemo.samples.backend.DataService;
-import de.hardt.vaadinDemo.samples.backend.data.Product;
 
 import com.vaadin.data.provider.AbstractDataProvider;
 import com.vaadin.data.provider.Query;
 
+import de.hardt.vaadinDemo.samples.backend.DataService;
+import de.hardt.vaadinDemo.samples.backend.data.Product;
+
 public class ProductDataProvider
         extends AbstractDataProvider<Product, String> {
-    
-    /** Text filter that can be changed separately. */
+	private static final long serialVersionUID = 3541294276774556228L;
+	
+	/** Text filter that can be changed separately. */
     private String filterText = "";
 
     /**

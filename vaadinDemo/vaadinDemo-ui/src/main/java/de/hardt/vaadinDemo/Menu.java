@@ -27,8 +27,9 @@ import com.vaadin.ui.themes.ValoTheme;
  * Responsive navigation menu presenting a list of available views to the user.
  */
 public class Menu extends CssLayout {
-
-    private static final String VALO_MENUITEMS = "valo-menuitems";
+	private static final long serialVersionUID = -5536869524186134383L;
+	
+	private static final String VALO_MENUITEMS = "valo-menuitems";
     private static final String VALO_MENU_TOGGLE = "valo-menu-toggle";
     private static final String VALO_MENU_VISIBLE = "valo-menu-visible";
     private Navigator navigator;
@@ -61,8 +62,9 @@ public class Menu extends CssLayout {
         // logout menu item
         MenuBar logoutMenu = new MenuBar();
         logoutMenu.addItem("Logout", VaadinIcons.SIGN_OUT, new Command() {
+			private static final long serialVersionUID = -5743515223303489473L;
 
-            @Override
+			@Override
             public void menuSelected(MenuItem selectedItem) {
                 VaadinSession.getCurrent().getSession().invalidate();
                 Page.getCurrent().reload();
@@ -74,7 +76,9 @@ public class Menu extends CssLayout {
 
         // button for toggling the visibility of the menu when on a small screen
         final Button showMenu = new Button("Menu", new ClickListener() {
-            @Override
+			private static final long serialVersionUID = -8621003818628465723L;
+
+			@Override
             public void buttonClick(final ClickEvent event) {
                 if (menuPart.getStyleName().contains(VALO_MENU_VISIBLE)) {
                     menuPart.removeStyleName(VALO_MENU_VISIBLE);
@@ -142,8 +146,9 @@ public class Menu extends CssLayout {
     private void createViewButton(final String name, String caption,
             Resource icon) {
         Button button = new Button(caption, new ClickListener() {
+			private static final long serialVersionUID = -4019483131121425713L;
 
-            @Override
+			@Override
             public void buttonClick(ClickEvent event) {
                 navigator.navigateTo(name);
 

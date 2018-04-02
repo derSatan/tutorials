@@ -8,11 +8,12 @@ import com.vaadin.ui.HorizontalLayout;
 
 import de.hardt.vaadinDemo.menuItems.about.AboutView;
 import de.hardt.vaadinDemo.menuItems.absender.AbsenderView;
+import de.hardt.vaadinDemo.menuItems.crud.CrudView;
 import de.hardt.vaadinDemo.menuItems.demoZone.DemoZoneView;
 import de.hardt.vaadinDemo.menuItems.deus.DeusView;
 import de.hardt.vaadinDemo.menuItems.helperSuite.HelperSuiteView;
 import de.hardt.vaadinDemo.menuItems.opmBulk.OpmBulkView;
-import de.hardt.vaadinDemo.menuItems.status.SystemStatusView;
+import de.hardt.vaadinDemo.menuItems.systemStatus.SystemStatusView;
 
 /**
  * Content of the UI when the user is logged in.
@@ -20,7 +21,9 @@ import de.hardt.vaadinDemo.menuItems.status.SystemStatusView;
  * 
  */
 public class MainScreen extends HorizontalLayout {
-    private Menu menu;
+	private static final long serialVersionUID = -7999181203596829318L;
+	
+	private Menu menu;
 
     public MainScreen(VaadinDemoUI ui) {
 
@@ -46,10 +49,13 @@ public class MainScreen extends HorizontalLayout {
         		HelperSuiteView.VIEW_NAME, VaadinIcons.HAMMER);
         menu.addView(new DemoZoneView(), DemoZoneView.VIEW_NAME,
         		DemoZoneView.VIEW_NAME, VaadinIcons.TOOLBOX);
+        menu.addView(new CrudView(), CrudView.VIEW_NAME,
+        		CrudView.VIEW_NAME, VaadinIcons.BAR_CHART);
         menu.addView(new AboutView(), AboutView.VIEW_NAME, AboutView.VIEW_NAME,
                 VaadinIcons.INFO_CIRCLE);
 
         navigator.addViewChangeListener(viewChangeListener);
+        navigator.navigateTo(SystemStatusView.VIEW_NAME);
         
         addComponent(menu);
         addComponent(viewContainer);
@@ -57,24 +63,18 @@ public class MainScreen extends HorizontalLayout {
         setSizeFull();
     }
     
-//    private void showNotification(Notification notification) {
-//        // keep the notification visible a little while after moving the
-//        // mouse, or until clicked
-//        notification.setDelayMsec(2000);
-//        notification.show(Page.getCurrent());
-//    }
-
 	// notify the view menu about view changes so that it can display which view is currently active
     ViewChangeListener viewChangeListener = new ViewChangeListener() {
 
-        @Override
+		private static final long serialVersionUID = 5395039040269517284L;
+
+		@Override
         public boolean beforeViewChange(ViewChangeEvent event) {
             return true;
         }
 
         @Override
         public void afterViewChange(ViewChangeEvent event) {
-//        	showNotification(new Notification("You clicked '" + event.getViewName() + "'", Notification.Type.HUMANIZED_MESSAGE));
             menu.setActiveView(event.getViewName());
         }
 

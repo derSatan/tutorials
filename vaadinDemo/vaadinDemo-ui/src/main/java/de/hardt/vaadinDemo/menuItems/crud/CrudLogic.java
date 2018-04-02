@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.menuItems.status;
+package de.hardt.vaadinDemo.menuItems.crud;
 
 import de.hardt.vaadinDemo.VaadinDemoUI;
 import de.hardt.vaadinDemo.samples.backend.DataService;
@@ -16,11 +16,12 @@ import com.vaadin.server.Page;
  * the system separately, and to e.g. provide alternative views for the same
  * data.
  */
-public class SystemStatusLogic implements Serializable {
+public class CrudLogic implements Serializable {
+	private static final long serialVersionUID = -5401211019656607917L;
+	
+	private CrudView view;
 
-    private SystemStatusView view;
-
-    public SystemStatusLogic(SystemStatusView simpleCrudView) {
+    public CrudLogic(CrudView simpleCrudView) {
         view = simpleCrudView;
     }
 
@@ -50,7 +51,7 @@ public class SystemStatusLogic implements Serializable {
 
         Page page = VaadinDemoUI.get().getPage();
         page.setUriFragment(
-                "!" + SystemStatusView.VIEW_NAME + "/" + fragmentParameter,
+                "!" + CrudView.VIEW_NAME + "/" + fragmentParameter,
                 false);
     }
 

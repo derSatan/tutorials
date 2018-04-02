@@ -12,8 +12,9 @@ import com.vaadin.ui.TextField;
  *      in Vaadin 7</a>
  */
 public class ResetButtonForTextField extends AbstractExtension {
+	private static final long serialVersionUID = 6832519305094955397L;
 
-    public static void extend(TextField field) {
+	public static void extend(TextField field) {
         new ResetButtonForTextField().extend((AbstractClientConnector) field);
     }
 }

@@ -10,21 +10,15 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 
 public class AboutView extends VerticalLayout implements View {
-
-    public static final String VIEW_NAME = "About";
+	private static final long serialVersionUID = -2440216779744583216L;
+	
+	public static final String VIEW_NAME = "About";
 
     public AboutView() {
         CustomLayout aboutContent = new CustomLayout("defaultview");
         aboutContent.setStyleName("default-content");
-
-        // you can add Vaadin components in predefined slots in the custom
-        // layout
-        aboutContent.addComponent(
-                new Label("<h1>Demo OPM Vaadin Application</h1>", ContentMode.HTML), "header");
-        aboutContent.addComponent(
-                new Label("Dies ist eine Output Management Demo Applikation (Benutzt Vaadin "
-                        + Version.getFullVersion() + ")", ContentMode.TEXT), "info");
-
+        aboutContent.addComponent(new Label("<h1>Demo OPM Vaadin Application</h1>", ContentMode.HTML), "header");
+        aboutContent.addComponent(new Label("Dies ist eine Output Management Demo Applikation (Benutzt Vaadin " + Version.getFullVersion() + ")", ContentMode.TEXT), "info");
         setSizeFull();
         setMargin(false);
         setStyleName("default-view");

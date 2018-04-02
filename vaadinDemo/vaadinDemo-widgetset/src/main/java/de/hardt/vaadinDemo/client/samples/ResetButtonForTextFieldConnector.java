@@ -7,13 +7,13 @@ import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
 import com.google.gwt.event.logical.shared.AttachEvent;
 import com.google.gwt.user.client.DOM;
-import com.vaadin.client.ComponentConnector;
 import com.vaadin.client.ServerConnector;
 import com.vaadin.client.communication.StateChangeEvent;
 import com.vaadin.client.extensions.AbstractExtensionConnector;
 import com.vaadin.client.ui.VTextField;
 import com.vaadin.client.ui.textfield.AbstractTextFieldConnector;
 import com.vaadin.shared.ui.Connect;
+
 import de.hardt.vaadinDemo.samples.ResetButtonForTextField;
 
 /**
@@ -25,8 +25,9 @@ import de.hardt.vaadinDemo.samples.ResetButtonForTextField;
 @Connect(ResetButtonForTextField.class)
 public class ResetButtonForTextFieldConnector extends
         AbstractExtensionConnector implements KeyUpHandler, AttachEvent.Handler {
-
-    public static final String CLASSNAME = "resetbuttonfortextfield";
+	private static final long serialVersionUID = -1812469806507912795L;
+	
+	public static final String CLASSNAME = "resetbuttonfortextfield";
     private AbstractTextFieldConnector textFieldConnector;
     private VTextField textField;
     private Element resetButtonElement;
@@ -35,7 +36,9 @@ public class ResetButtonForTextFieldConnector extends
     protected void extend(ServerConnector serverConnector) {
         serverConnector
                 .addStateChangeHandler(new StateChangeEvent.StateChangeHandler() {
-                    @Override
+					private static final long serialVersionUID = 7604670969301257311L;
+
+					@Override
                     public void onStateChanged(StateChangeEvent stateChangeEvent) {
                         Scheduler.get().scheduleDeferred(
                                 new Scheduler.ScheduledCommand() {

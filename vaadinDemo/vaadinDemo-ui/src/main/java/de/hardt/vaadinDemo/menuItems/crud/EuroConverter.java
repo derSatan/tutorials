@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.menuItems.status;
+package de.hardt.vaadinDemo.menuItems.crud;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -14,8 +14,9 @@ import com.vaadin.data.ValueContext;
  * decimal places.
  */
 public class EuroConverter extends StringToBigDecimalConverter {
+	private static final long serialVersionUID = 3295973217149358573L;
 
-    public EuroConverter() {
+	public EuroConverter() {
         super("Cannot convert value to a number");
     }
 

@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.menuItems.status;
+package de.hardt.vaadinDemo.menuItems.crud;
 
 import java.text.DecimalFormat;
 import java.util.Comparator;
@@ -19,8 +19,9 @@ import com.vaadin.ui.renderers.NumberRenderer;
  * data sets.
  */
 public class ProductGrid extends Grid<Product> {
+	private static final long serialVersionUID = -3863953777812746937L;
 
-    public ProductGrid() {
+	public ProductGrid() {
         setSizeFull();
 
         addColumn(Product::getId, new NumberRenderer()).setCaption("Id");

@@ -11,8 +11,9 @@ import de.hardt.vaadinDemo.samples.backend.mock.MockDataService;
  * Back-end service interface for retrieving and updating product data.
  */
 public abstract class DataService implements Serializable {
+	private static final long serialVersionUID = 7891845553172466832L;
 
-    public abstract Collection<Product> getAllProducts();
+	public abstract Collection<Product> getAllProducts();
 
     public abstract Collection<Category> getAllCategories();
 

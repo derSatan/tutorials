@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.menuItems.status;
+package de.hardt.vaadinDemo.menuItems.crud;
 
 import de.hardt.vaadinDemo.samples.backend.data.Availability;
 import de.hardt.vaadinDemo.samples.backend.data.Category;

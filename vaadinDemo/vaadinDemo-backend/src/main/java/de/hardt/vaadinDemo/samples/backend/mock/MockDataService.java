@@ -11,8 +11,9 @@ import de.hardt.vaadinDemo.samples.backend.data.Product;
  * notify users of modifications.
  */
 public class MockDataService extends DataService {
+	private static final long serialVersionUID = 2475620906138049479L;
 
-    private static MockDataService INSTANCE;
+	private static MockDataService INSTANCE;
 
     private List<Product> products;
     private List<Category> categories;

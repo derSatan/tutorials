@@ -9,12 +9,11 @@ import com.vaadin.ui.themes.ValoTheme;
 /**
  * View shown when trying to navigate to a view that does not exist using
  * {@link com.vaadin.navigator.Navigator}.
- * 
- * 
  */
 public class ErrorView extends VerticalLayout implements View {
-
-    private Label explanation;
+	private static final long serialVersionUID = 7457836260512589939L;
+	
+	private Label explanation;
 
     public ErrorView() {
         Label header = new Label("The view could not be found");

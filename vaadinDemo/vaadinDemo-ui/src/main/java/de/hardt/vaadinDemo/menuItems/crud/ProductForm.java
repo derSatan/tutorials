@@ -1,22 +1,21 @@
-package de.hardt.vaadinDemo.menuItems.status;
+package de.hardt.vaadinDemo.menuItems.crud;
 
-import java.lang.reflect.InvocationTargetException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Collection;
 import java.util.Locale;
 
+import com.vaadin.data.BeanValidationBinder;
+import com.vaadin.data.Binder;
+import com.vaadin.data.Result;
+import com.vaadin.data.ValueContext;
+import com.vaadin.data.converter.StringToIntegerConverter;
+import com.vaadin.server.Page;
+
 import de.hardt.vaadinDemo.samples.AttributeExtension;
 import de.hardt.vaadinDemo.samples.backend.data.Availability;
 import de.hardt.vaadinDemo.samples.backend.data.Category;
 import de.hardt.vaadinDemo.samples.backend.data.Product;
-
-import com.vaadin.data.BeanValidationBinder;
-import com.vaadin.data.Binder;
-import com.vaadin.data.Result;
-import com.vaadin.data.converter.StringToIntegerConverter;
-import com.vaadin.data.ValueContext;
-import com.vaadin.server.Page;
 
 /**
  * A form for editing a single product.
@@ -26,14 +25,16 @@ import com.vaadin.server.Page;
  * CSS rules.
  */
 public class ProductForm extends ProductFormDesign {
-
-    private SystemStatusLogic viewLogic;
+	private static final long serialVersionUID = -7717605679387251731L;
+	
+	private CrudLogic viewLogic;
     private Binder<Product> binder;
     private Product currentProduct;
 
     private static class StockPriceConverter extends StringToIntegerConverter {
+		private static final long serialVersionUID = 8075404411476443959L;
 
-        public StockPriceConverter() {
+		public StockPriceConverter() {
             super("Could not convert value to " + Integer.class.getName());
         }
 
@@ -60,7 +61,7 @@ public class ProductForm extends ProductFormDesign {
 
     }
 
-    public ProductForm(SystemStatusLogic sampleCrudLogic) {
+    public ProductForm(CrudLogic sampleCrudLogic) {
         super();
         addStyleName("product-form");
         viewLogic = sampleCrudLogic;

@@ -6,8 +6,9 @@ package de.hardt.vaadinDemo.authentication;
  * administrator.
  */
 public class BasicAccessControl implements AccessControl {
+	private static final long serialVersionUID = 3354942576980993097L;
 
-    @Override
+	@Override
     public boolean signIn(String username, String password) {
         if (username == null || username.isEmpty())
             return false;

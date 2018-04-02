@@ -18,11 +18,12 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 /**
- * UI content when the user is not logged in yet.
+ * UI für den Login Screen
  */
 public class LoginScreen extends CssLayout {
-
-    private TextField username;
+	private static final long serialVersionUID = -4968836285299655599L;
+	
+	private TextField username;
     private PasswordField password;
     private Button login;
     private Button forgotPassword;
@@ -79,7 +80,9 @@ public class LoginScreen extends CssLayout {
         buttons.addComponent(login = new Button("Login"));
         login.setDisableOnClick(true);
         login.addClickListener(new Button.ClickListener() {
-            @Override
+			private static final long serialVersionUID = 6704952558366963204L;
+
+			@Override
             public void buttonClick(Button.ClickEvent event) {
                 try {
                     login();
@@ -93,7 +96,9 @@ public class LoginScreen extends CssLayout {
 
         buttons.addComponent(forgotPassword = new Button("Forgot password?"));
         forgotPassword.addClickListener(new Button.ClickListener() {
-            @Override
+			private static final long serialVersionUID = -6022188828591632316L;
+
+			@Override
             public void buttonClick(Button.ClickEvent event) {
                 showNotification(new Notification("Hint: Try anything"));
             }
