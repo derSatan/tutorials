@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.backend.data;
+package de.hardt.vaadinDemo.samples.backend.crud.data;
 
 public enum Availability {
     COMING("Coming"), AVAILABLE("Available"), DISCONTINUED("Discontinued");

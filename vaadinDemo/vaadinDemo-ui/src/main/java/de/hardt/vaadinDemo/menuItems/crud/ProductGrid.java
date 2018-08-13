@@ -4,14 +4,14 @@ import java.text.DecimalFormat;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
-import de.hardt.vaadinDemo.samples.backend.data.Availability;
-import de.hardt.vaadinDemo.samples.backend.data.Category;
-import de.hardt.vaadinDemo.samples.backend.data.Product;
-
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.ui.Grid;
 import com.vaadin.ui.renderers.HtmlRenderer;
 import com.vaadin.ui.renderers.NumberRenderer;
+
+import de.hardt.vaadinDemo.samples.backend.crud.data.Availability;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Category;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Product;
 
 /**
  * Grid of products, handling the visual presentation and filtering of a set of
@@ -25,7 +25,7 @@ public class ProductGrid extends Grid<Product> {
         setSizeFull();
 
         addColumn(Product::getId, new NumberRenderer()).setCaption("Id");
-        addColumn(Product::getProductName).setCaption("Product Name");
+        addColumn(Product::getProductName).setCaption("Healthcheck Name");
 
         // Format and add " €" to price
         final DecimalFormat decimalFormat = new DecimalFormat();

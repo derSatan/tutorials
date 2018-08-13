@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.backend.data;
+package de.hardt.vaadinDemo.samples.backend.crud.data;
 
 import java.io.Serializable;
 

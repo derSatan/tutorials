@@ -1,8 +1,8 @@
 package de.hardt.vaadinDemo.menuItems.crud;
 
 import de.hardt.vaadinDemo.samples.ResetButtonForTextField;
-import de.hardt.vaadinDemo.samples.backend.DataService;
-import de.hardt.vaadinDemo.samples.backend.data.Product;
+import de.hardt.vaadinDemo.samples.backend.CrudDataService;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Product;
 
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.navigator.View;
@@ -47,7 +47,7 @@ public class CrudView extends CssLayout implements View {
                 event -> viewLogic.rowSelected(event.getValue()));
 
         form = new ProductForm(viewLogic);
-        form.setCategories(DataService.get().getAllCategories());
+        form.setCategories(CrudDataService.get().getAllCategories());
 
         VerticalLayout barAndGridLayout = new VerticalLayout();
         barAndGridLayout.addComponent(topLayout);

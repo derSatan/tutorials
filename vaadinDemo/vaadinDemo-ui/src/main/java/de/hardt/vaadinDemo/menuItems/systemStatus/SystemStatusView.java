@@ -13,6 +13,8 @@ public class SystemStatusView extends VerticalLayout implements View {
 	private static final long serialVersionUID = -3793303480491021116L;
 	
 	public static final String VIEW_NAME = "Status Dashboard";
+	
+	private HealthcheckDataProvider dataProvider = new HealthcheckDataProvider();
 
     public SystemStatusView() {
         CustomLayout deusContent = new CustomLayout("defaultview");

@@ -1,8 +1,8 @@
 package de.hardt.vaadinDemo.menuItems.crud;
 
 import de.hardt.vaadinDemo.VaadinDemoUI;
-import de.hardt.vaadinDemo.samples.backend.DataService;
-import de.hardt.vaadinDemo.samples.backend.data.Product;
+import de.hardt.vaadinDemo.samples.backend.CrudDataService;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Product;
 
 import java.io.Serializable;
 import com.vaadin.server.Page;
@@ -73,7 +73,7 @@ public class CrudLogic implements Serializable {
     }
 
     private Product findProduct(int productId) {
-        return DataService.get().getProductById(productId);
+        return CrudDataService.get().getProductById(productId);
     }
 
     public void saveProduct(Product product) {

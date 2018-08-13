@@ -2,8 +2,9 @@ package de.hardt.vaadinDemo.samples.backend;
 
 import org.junit.Before;
 import org.junit.Test;
-import de.hardt.vaadinDemo.samples.backend.data.Product;
-import de.hardt.vaadinDemo.samples.backend.mock.MockDataService;
+
+import de.hardt.vaadinDemo.samples.backend.crud.data.Product;
+import de.hardt.vaadinDemo.samples.backend.crud.mock.MockDataService;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -11,9 +12,9 @@ import static org.junit.Assert.assertFalse;
 /**
  * Simple unit test for the back-end data service.
  */
-public class DataServiceTest {
+public class CrudDataServiceTest {
 
-    private DataService service;
+    private CrudDataService service;
 
     @Before
     public void setUp() throws Exception {

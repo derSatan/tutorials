@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.backend.data;
+package de.hardt.vaadinDemo.samples.backend.crud.data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -14,7 +14,7 @@ public class Product implements Serializable {
 	@NotNull
     private int id = -1;
     @NotNull
-    @Size(min = 2, message = "Product name must have at least two characters")
+    @Size(min = 2, message = "Healthcheck name must have at least two characters")
     private String productName = "";
     @Min(0)
     private BigDecimal price = BigDecimal.ZERO;

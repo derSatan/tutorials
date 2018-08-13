@@ -7,8 +7,8 @@ import java.util.stream.Stream;
 import com.vaadin.data.provider.AbstractDataProvider;
 import com.vaadin.data.provider.Query;
 
-import de.hardt.vaadinDemo.samples.backend.DataService;
-import de.hardt.vaadinDemo.samples.backend.data.Product;
+import de.hardt.vaadinDemo.samples.backend.CrudDataService;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Product;
 
 public class ProductDataProvider
         extends AbstractDataProvider<Product, String> {
@@ -26,7 +26,7 @@ public class ProductDataProvider
     public void save(Product product) {
         boolean newProduct = product.getId() == -1;
         
-        DataService.get().updateProduct(product);
+        CrudDataService.get().updateProduct(product);
         if (newProduct) {
             refreshAll();
         } else {
@@ -41,7 +41,7 @@ public class ProductDataProvider
      *            the product to be deleted
      */
     public void delete(Product product) {
-        DataService.get().deleteProduct(product.getId());
+        CrudDataService.get().deleteProduct(product.getId());
         refreshAll();
     }
     
@@ -83,9 +83,9 @@ public class ProductDataProvider
     @Override
     public Stream<Product> fetch(Query<Product, String> query) {
         if (filterText.isEmpty()) {
-            return DataService.get().getAllProducts().stream();
+            return CrudDataService.get().getAllProducts().stream();
         }
-        return DataService.get().getAllProducts().stream().filter(
+        return CrudDataService.get().getAllProducts().stream().filter(
                 product -> passesFilter(product.getProductName(), filterText)
                         || passesFilter(product.getAvailability(), filterText)
                         || passesFilter(product.getCategory(), filterText));

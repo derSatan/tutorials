@@ -1,4 +1,4 @@
-package de.hardt.vaadinDemo.samples.backend.mock;
+package de.hardt.vaadinDemo.samples.backend.crud.mock;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -7,9 +7,10 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-import de.hardt.vaadinDemo.samples.backend.data.Availability;
-import de.hardt.vaadinDemo.samples.backend.data.Category;
-import de.hardt.vaadinDemo.samples.backend.data.Product;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Availability;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Category;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Product;
+import de.hardt.vaadinDemo.samples.backend.healthcheck.data.Healthcheck;
 
 public class MockDataGenerator {
     private static int nextCategoryId = 1;
@@ -96,5 +97,4 @@ public class MockDataGenerator {
         return word1[random.nextInt(word1.length)] + " "
                 + word2[random.nextInt(word2.length)];
     }
-
 }

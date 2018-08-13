@@ -1,16 +1,16 @@
-package de.hardt.vaadinDemo.samples.backend.mock;
+package de.hardt.vaadinDemo.samples.backend.crud.mock;
 
 import java.util.List;
 
-import de.hardt.vaadinDemo.samples.backend.DataService;
-import de.hardt.vaadinDemo.samples.backend.data.Category;
-import de.hardt.vaadinDemo.samples.backend.data.Product;
+import de.hardt.vaadinDemo.samples.backend.CrudDataService;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Category;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Product;
 
 /**
  * Mock data model. This implementation has very simplistic locking and does not
  * notify users of modifications.
  */
-public class MockDataService extends DataService {
+public class MockDataService extends CrudDataService {
 	private static final long serialVersionUID = 2475620906138049479L;
 
 	private static MockDataService INSTANCE;
@@ -25,7 +25,7 @@ public class MockDataService extends DataService {
         nextProductId = products.size() + 1;
     }
 
-    public synchronized static DataService getInstance() {
+    public synchronized static CrudDataService getInstance() {
         if (INSTANCE == null) {
             INSTANCE = new MockDataService();
         }
@@ -75,7 +75,7 @@ public class MockDataService extends DataService {
     public synchronized void deleteProduct(int productId) {
         Product p = getProductById(productId);
         if (p == null) {
-            throw new IllegalArgumentException("Product with id " + productId
+            throw new IllegalArgumentException("Healthcheck with id " + productId
                     + " not found");
         }
         products.remove(p);

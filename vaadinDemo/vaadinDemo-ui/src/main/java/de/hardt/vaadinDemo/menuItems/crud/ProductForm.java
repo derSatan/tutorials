@@ -13,9 +13,9 @@ import com.vaadin.data.converter.StringToIntegerConverter;
 import com.vaadin.server.Page;
 
 import de.hardt.vaadinDemo.samples.AttributeExtension;
-import de.hardt.vaadinDemo.samples.backend.data.Availability;
-import de.hardt.vaadinDemo.samples.backend.data.Category;
-import de.hardt.vaadinDemo.samples.backend.data.Product;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Availability;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Category;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Product;
 
 /**
  * A form for editing a single product.

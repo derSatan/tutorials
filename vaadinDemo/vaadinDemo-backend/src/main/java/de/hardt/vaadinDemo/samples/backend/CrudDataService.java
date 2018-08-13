@@ -3,14 +3,14 @@ package de.hardt.vaadinDemo.samples.backend;
 import java.io.Serializable;
 import java.util.Collection;
 
-import de.hardt.vaadinDemo.samples.backend.data.Category;
-import de.hardt.vaadinDemo.samples.backend.data.Product;
-import de.hardt.vaadinDemo.samples.backend.mock.MockDataService;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Category;
+import de.hardt.vaadinDemo.samples.backend.crud.data.Product;
+import de.hardt.vaadinDemo.samples.backend.crud.mock.MockDataService;
 
 /**
  * Back-end service interface for retrieving and updating product data.
  */
-public abstract class DataService implements Serializable {
+public abstract class CrudDataService implements Serializable {
 	private static final long serialVersionUID = 7891845553172466832L;
 
 	public abstract Collection<Product> getAllProducts();
@@ -23,7 +23,7 @@ public abstract class DataService implements Serializable {
 
     public abstract Product getProductById(int productId);
 
-    public static DataService get() {
+    public static CrudDataService get() {
         return MockDataService.getInstance();
     }
 
