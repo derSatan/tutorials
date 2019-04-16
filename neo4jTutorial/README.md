@@ -1,3 +1,3 @@
 # Tutorials
 
-Dies sind gesammelte Tutorials für verschiedene Techniken
+Dies sind gesammelte Tutorials fÃ¼r verschiedene Techniken
