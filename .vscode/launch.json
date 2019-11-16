@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SpringActuatorApplication",
+            "request": "launch",
+            "mainClass": "de.derSatan.tutorial.springActuator.SpringActuatorApplication",
+            "projectName": "springActuator"
+        }
+    ]
+}
