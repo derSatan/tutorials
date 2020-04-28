@@ -3,8 +3,12 @@ package de.hardt.vaadinDemo;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.ViewChangeListener;
+import com.vaadin.ui.Accordion;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.ui.Image;
+import com.vaadin.ui.Layout;
+import com.vaadin.ui.VerticalLayout;
 
 import de.hardt.vaadinDemo.menuItems.about.AboutView;
 import de.hardt.vaadinDemo.menuItems.absender.AbsenderView;
@@ -33,7 +37,29 @@ public class MainScreen extends HorizontalLayout {
         CssLayout viewContainer = new CssLayout();
         viewContainer.addStyleName("valo-content");
         viewContainer.setSizeFull();
-                
+        
+        // Create the accordion
+        Accordion accordion = new Accordion();
+        
+        // Create the first tab for DEUS DB, specify caption when adding
+        Layout tab1 = new VerticalLayout(); // Wrap in a layout
+        tab1.addComponent(new Image("Dokumenttypen",
+        		VaadinIcons.ACCORDION_MENU));
+        tab1.addComponent(new Image("Dokumenttypgruppen",
+        		VaadinIcons.ACCORDION_MENU));
+        tab1.addComponent(new Image("Zustelltypen",
+        		VaadinIcons.ACCORDION_MENU));
+        tab1.addComponent(new Image("Pakettypen",
+        		VaadinIcons.ACCORDION_MENU));
+        tab1.addComponent(new Image("Versandwege",
+        		VaadinIcons.ACCORDION_MENU));
+        tab1.addComponent(new Image("Zuordnungen",
+        		VaadinIcons.ACCORDION_MENU));
+        accordion.addTab(tab1, "DEUS DB",
+        		VaadinIcons.DATABASE);
+        
+        addComponent(accordion);
+        
         final Navigator navigator = new Navigator(ui, viewContainer);
         navigator.setErrorView(ErrorView.class);
         menu = new Menu(navigator);
