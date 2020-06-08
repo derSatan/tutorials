@@ -1,0 +1,27 @@
+# Operating System Files
+
+*.DS_Store
+Thumbs.db
+
+# Build Files #
+
+bin
+target
+build
+node
+node_modules
+.gradle
+
+# Eclipse Project Files #
+
+.classpath
+.project
+.settings
+.springBeans
+.mvn
+
+# Test files
+
+accessingdataneo4j.db
+dependency-reduced-pom.xml
+README.html
