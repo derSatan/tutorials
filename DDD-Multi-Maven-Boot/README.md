@@ -3,9 +3,9 @@
 Normally, there should be an "repository" module where the Repository implementations resides - I am using Spring Data for that.
 
 TODO:
-- Post
-- SpringSecurity
-- UI
+- Implement Post
+- Secure the application with SpringSecurity
+- Create a simple UI
 
 Endpoint example: http://localhost:8080/customer/<UUID>
 
