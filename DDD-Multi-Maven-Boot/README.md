@@ -10,4 +10,5 @@ TODO:
 Endpoint example: http://localhost:8080/customer/<UUID>
 
 H2 console: http://localhost:8080/h2-console
+
 DB jdbc:h2:mem:Customer
