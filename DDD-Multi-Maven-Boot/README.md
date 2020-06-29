@@ -3,12 +3,13 @@
 Normally, there should be an "repository" module where the Repository implementations resides - I am using Spring Data for that.
 
 TODO:
-- Implement Post
 - Secure the application with SpringSecurity
 - Create a simple UI
 
-Endpoint example: http://localhost:8080/customer/<UUID>
+## Endpoints
+Get all customers: GET http://localhost:8080/customers
+Get a customer: GET http://localhost:8080/customers/<UUID>
+Delete a customer: DELETE http://localhost:8080/customers
+Create a customer: POST http://localhost:8080/customers?name=<name>&job=<job>
 
 H2 console: http://localhost:8080/h2-console
-
-DB jdbc:h2:mem:Customer
