@@ -27,6 +27,7 @@
 		<module>controller</module>
 		<module>domain</module>
 		<module>service</module>
+		<module>authserver</module>
 	</modules>
 	
     <dependencies>
